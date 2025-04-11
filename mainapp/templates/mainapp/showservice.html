@@ -1,0 +1,10 @@
+{%extends 'mainapp/master.html'%}
+{%load static%}
+{%block 'mohtava'%}
+لیست سرویسها
+<br/>
+{%for itm in ser%}
+{{itm.title}}
+<br/>
+{%endfor%}  
+{%endblock%}

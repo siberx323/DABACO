@@ -1,0 +1,34 @@
+{%extends 'mainapp/master.html'%}
+{%load static%}
+{%block 'mohtava'%}
+<div class="main-banner wow fadeIn" id="top" data-wow-duration="1s" data-wow-delay="0.5s">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="row">
+          <div class="col-lg-6 align-self-center">
+            <div class="left-content header-text wow fadeInLeft" data-wow-duration="1s" data-wow-delay="1s">
+              <h6>{{hom.0.text1}} </h6>
+              <h2>{{hom.0.text2}}</h2>
+              <p>{{hom.0.text3}}</p>
+              <form id="search" action="#" method="GET">
+                <fieldset>
+                  <input type="address" name="address" class="email" placeholder="آدرس سایت شما" autocomplete="on" required>
+                </fieldset>
+                <fieldset>
+                  <button type="submit" class="main-button">آنالیز سایت</button>
+                </fieldset>
+              </form>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="right-image wow fadeInRight" data-wow-duration="1s" data-wow-delay="0.5s">
+              <img src="{%static '/mainapp/'%}assets/images/banner-right-image.png" alt="team meeting">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+  {%endblock%}

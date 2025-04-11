@@ -1,0 +1,33 @@
+{%extends 'mainapp/master.html'%}
+{%load static%}
+{%block 'mohtava'%}
+<div id="portfolio" class="our-portfolio section">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 offset-lg-3">
+          <div class="section-heading  wow bounceIn" data-wow-duration="1s" data-wow-delay="0.2s">
+            <h2>آنچه آژانس ما ارائه <em>می دهد</em>  و آنچه ما ارائه می دهیم را <span>ببینید</span></h2>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        {%for itm in cat%}
+        <div class="col-lg-3 col-sm-6">
+          <a href="/showservice/{{itm.id}}">
+            <div class="item wow bounceInUp" data-wow-duration="1s" data-wow-delay="0.3s">
+              <div class="hidden-content">
+                <h4>{{itm.title}}</h4>
+                <p>{{itm.description}}</p>
+              </div>
+              <div class="showed-content">
+                <img src="{{itm.img.url}}" alt="">
+              </div>
+            </div>
+          </a>
+        </div>
+        {%endfor%}
+
+      </div>
+    </div>
+  </div>
+{%endblock%}
